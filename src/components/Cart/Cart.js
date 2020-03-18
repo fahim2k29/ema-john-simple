@@ -35,7 +35,7 @@ const Cart = (props) => {
             <p>Product Price: $ {formatNumber(total)}</p>
             <p><small>Shipping Cost: $ {shipping}</small></p>
             <p><small>Tax + VAT: $ {tax}</small></p>
-            <p id="totalPrice">Total price: $ {gradTotal}</p>
+            <h4 id="totalPrice">Total price: $ {gradTotal}</h4>
         </div>
     );
 };
