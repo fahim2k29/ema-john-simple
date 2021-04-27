@@ -95,10 +95,10 @@ function Login() {
     <div style={{textAlign:'center'}}>
       {
         user.isSignedIn ? <button onClick={signedOut}>Sign out</button> :
-          <button onClick={googleSignIn}>Sign in</button>
+          <button onClick={googleSignIn}>Sign in with Google</button>
       }
       <br />
-      <button onClick={fbSignIn}>SignIn Using Facebook</button>
+      <button onClick={fbSignIn}>SignIn with Facebook</button>
       {
         user.isSignedIn && <div>
           <p>Welcome, {user.name}</p>

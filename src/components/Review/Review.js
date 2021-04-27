@@ -54,7 +54,11 @@ const Review = () => {
         </div>
          <div className="cart-container">
             <Cart cart={cart}>
+                {cart.length != 0 ?
                 <button onClick={handleProceedCheckout} className="button">Proceed Checkout</button>  
+                : ""
+                
+                }
             </Cart>
         </div>
      </div>

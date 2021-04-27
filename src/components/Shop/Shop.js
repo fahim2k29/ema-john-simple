@@ -11,7 +11,6 @@ const Shop = () => {
     const first10 = fakeData.slice(0,10);
     const [products, setProducts] = useState(first10);
     const [cart, setCart] = useState([]);
-
     
     useEffect( () =>{
         const savedCart = getDatabaseCart();
@@ -64,9 +63,13 @@ const Shop = () => {
            </div>
            <div className="cart-container">
                <Cart cart={cart}>
+                   {cart.length != 0 ?
                     <Link to="/review">
                         <button className="button">Review Order</button>
                     </Link>
+                    : ""
+                   
+                   }
                </Cart>
            </div>
         </div>

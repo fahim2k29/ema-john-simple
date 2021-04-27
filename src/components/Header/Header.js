@@ -7,14 +7,21 @@ import {useContext} from 'react';
 
 const Header = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    console.log(loggedInUser.name);
     return (
         <div className="header">
            <img src={logo} alt=""/>
             <nav>
                 <Link to="/shop">Shop</Link>
                 <Link to="/review">Order Review</Link>
-                <Link to="/inventory">Inventory</Link>
-                <button onClick={()=> setLoggedInUser({})}>Sign Out</button>
+                <Link to="/orders">Order History</Link>
+                
+                {loggedInUser.email ? 
+                
+                <button onClick={()=> setLoggedInUser({})}> <span style={{backgroundColor:'yellow'}}>WelCome {loggedInUser.name}</span>  Sign out</button>
+                :
+                <Link to='/login'>Sign in</Link>
+                }
             </nav>
         </div>
     );
